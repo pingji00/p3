@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','FormController@index');
+Route::get('/checkform', 'FormController@checkAnswer');
+//Route::get('/','FormController@checkAnswer');
