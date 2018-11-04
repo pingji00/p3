@@ -6,15 +6,16 @@
 
     {{-- Globe CSS goes here --}}
     <link href='/css/app.css' rel='stylesheet'>
-
+    <link href='/css/calc/main.css' rel='stylesheet'>
     {{-- Specific CSS goes here --}}
-    @stack('head')
+    @stack('morecss')
 </head>
 <body>
 
 <header>
-    <h1>Calorie Calculator</h1>
-    <p>This food Calorie Calculator below allows you to choose from dozens of foods, and see nutrition facts such as calories, fat, protein, etc.</p>
+    <h1 class='name'><a href='/'>Calorie Calculator</a></h1>
+    <p class='des'>This food Calorie Calculator below allows you to choose from dozens of foods, and see nutrition facts such as calories, fat, protein, etc.</p>
+    @include('modules.nav')
 </header>
 
 <section>

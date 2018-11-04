@@ -11,7 +11,11 @@
 |
 */
 
+Route::get('/','CalorieCalc@index');
 
-Route::get('/','FormController@index');
-Route::get('/checkform', 'FormController@checkAnswer');
+Route::get('/calc','CalorieCalc@calc');
+Route::get('/checkform', 'CalorieCalc@checkAnswer');
+
 //Route::get('/','FormController@checkAnswer');
+Route::view('/contact', 'calc/contact');
+Route::view('/about', 'calc/about');
