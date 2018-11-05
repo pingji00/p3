@@ -1,3 +1,31 @@
 .calc-container {
     margin: 2vh 20vw;
 }
+form {
+    background-color: #f3f3f3;
+    padding: 2em;
+}
+.alert {
+    font: normal normal bold 2rem/1em sans-serif;
+    padding: .2em .5em;
+    margin: 1em 20vh .5em;
+    border-top: 1px solid black;
+}
+.warning {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
+dl {
+    margin: 1vh 20vw;
+}
+dt {
+    font-size: .6em;
+    border-top: 1px dotted black;
+}
+dd {
+    display: inline-block;
+    margin: 0;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
