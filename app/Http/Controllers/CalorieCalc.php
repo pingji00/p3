@@ -47,7 +47,7 @@ class CalorieCalc extends Controller
     public function calcProcess(Request $request)
     {
         $request->validate([
-            'quantity' => 'required|numeric|min:0|max:10',
+            'quantity' => 'required|numeric|gt:0|max:10',
             'unit' => 'required',
         ]);
 //        dump($request->all());

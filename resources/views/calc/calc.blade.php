@@ -8,11 +8,12 @@
 
 
 @section('content')
+    <h2 class='form-title'>Now do the math</h2>
     <form class='calc-container' method='GET' action='/calc-process'>
         <div class='amount'>
         <label>Qty:<input type="number"
                           name="quantity"
-                          placeholder= {{ old('quantity') }}></label>
+                          placeholder= {{ (!$inputFood) ? old('quantity') : "Amount?" }}></label>
         <label><input type='radio' name="unit" id="lb" value="lb" {{ ($unit == "lb" ? 'checked' : '') }}> lb</label>
         <label><input type="radio" name="unit" id='kg' value="kg" {{ ($unit == "kg" ? 'checked' : '') }}> kg</label>
         </div>

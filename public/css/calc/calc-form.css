@@ -5,6 +5,10 @@ form {
     background-color: #f3f3f3;
     padding: 2em;
 }
+.form-title {
+    text-align: center;
+    margin: 0 auto;
+}
 .alert {
     font: normal normal bold 2rem/1em sans-serif;
     padding: .2em .5em;
