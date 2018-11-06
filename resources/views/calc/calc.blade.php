@@ -9,17 +9,24 @@
 
 @section('content')
     <form class='calc-container' method='GET' action='/calc-process'>
-
+        <div class='amount'>
         <label>Qty:<input type="number"
                           name="quantity"
-                          placeholder=<?= ($inputFood) ? $quantity : "'How much do you eat?'" ?>></label>
-        <label><input type='radio' name="unit" id="lb" value="lb" checked> lb</label>
-        <label><input type="radio" name="unit" id='kg' value="kg"> kg</label><br><br>
+                          placeholder= {{ old('quantity') }}></label>
+        <label><input type='radio' name="unit" id="lb" value="lb" {{ ($unit == "lb" ? 'checked' : '') }}> lb</label>
+        <label><input type="radio" name="unit" id='kg' value="kg" {{ ($unit == "kg" ? 'checked' : '') }}> kg</label>
+        </div>
+        @if($errors->get('quantity'))
+            <div class='error'>{{ $errors->first('quantity') }}</div>
+        @endif
+        @if($errors->get('unit'))
+            <div class='error'>{{ $errors->first('unit') }}</div>
+        @endif
         <label>Food name:
             <select name='food' id='food'>
                 {{--<option value='name'>food name</option>--}}
                 @foreach($foods as $food)
-                    <option value='{{ $food["name"] }}'> {{ $food["name"] }} </option>
+                    <option value='{{ $food["name"] }}' {{($food["name"] == $inputFood ) ? 'selected' : '' }}> {{ $food["name"] }} </option>
                 @endforeach
             </select>
         </label>

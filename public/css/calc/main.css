@@ -11,15 +11,17 @@
 
 ul {
     list-style-type: none;
-    margin: 10vh;
-    padding: 0;
+    margin: 10vh 20vw;
+    padding: 1em 0;
     color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    border-top: 2px solid #1f6fb2;
+    border-bottom: 2px solid #1f6fb2;
 }
 
 li {
     padding: 0;
     margin: 0;
-    font: normal bold 2rem/1em sans-serif;
+    font: normal bold 1.2rem/1em sans-serif;
 }

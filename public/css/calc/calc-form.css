@@ -29,3 +29,11 @@ dd {
     font-weight: 100;
     margin-bottom: 1em;
 }
+.error {
+    color: deeppink;
+    font: normal normal .5rem/1em sans-serif;
+    margin-bottom: 2em;
+}
+.amount {
+    padding-bottom: .5rem;
+}

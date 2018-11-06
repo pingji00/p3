@@ -46,7 +46,11 @@ class CalorieCalc extends Controller
      */
     public function calcProcess(Request $request)
     {
-        dump($request->all());
+        $request->validate([
+            'quantity' => 'required|numeric|min:0|max:10',
+            'unit' => 'required',
+        ]);
+//        dump($request->all());
         $foodsRawData = file_get_contents(database_path('/foods.json'));
         $foods = json_decode($foodsRawData, true);
 
@@ -83,4 +87,5 @@ class CalorieCalc extends Controller
             'nutrFacts' => $nutrFacts
         ]);
     }
+
 }
