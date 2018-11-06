@@ -11,8 +11,7 @@
 + Dropdown to select the food.
 
 ## Packages
-+barryvdh
-+laravel-debugbar
++barryvdh/laravel-debugbar
 
 ## Code style divergences
 None
