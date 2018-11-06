@@ -4,6 +4,6 @@
 @endsection
 
 @section('content')
-<p>Should you have any questions,  please <a href='mailto:pingji@me.com'>drop a line</a></p>
+<h2>Should you have any questions,  please <a href='mailto:pingji@me.com'>drop a line</a></h2>
 
 @endsection

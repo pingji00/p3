@@ -5,6 +5,6 @@
 
 
 @section('content')
-    <p>This is home page</p>
+    <h2>This is home page</h2>
 
 @endsection
