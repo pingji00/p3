@@ -13,7 +13,7 @@
         <div class='amount'>
         <label>Qty:<input type="number"
                           name="quantity"
-                          placeholder= {{ ($inputFood) ? $quantity : "Amount?" }} value = {{ old('quantity') }}></label>
+                          placeholder= {{ ($inputFood) ? $quantity : "Amount?" }} ></label>
         <label><input type='radio' name="unit" id="lb" value="lb" {{ ($unit == "lb" ? 'checked' : '') }}> lb</label>
         <label><input type="radio" name="unit" id='kg' value="kg" {{ ($unit == "kg" ? 'checked' : '') }}> kg</label>
         </div>
