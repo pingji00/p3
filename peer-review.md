@@ -36,4 +36,4 @@ The routes file is simple and clean. No extra logic/display code in this file.
 + It is a simple practice and I found it easy to understand.
 
 ## 6. Misc
-The author put `class` in `<html>` tag, which is wrong.
+This is just something off the topic. Why Laravel put `class` in `<html>` tag? I thought it's the author's mistake, but found it in my code as well.
