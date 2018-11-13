@@ -4,65 +4,36 @@
 + Reviwee's name: Josh Lim
 + URL to Reviewe's P3 Github Repo URL: *<https://github.com/josh-lim1234/Project-3>*
 
-*Answer the following questions in regards to the student's project you are reviewing. REMOVE THE INSTRUCTIONS FOR EACH PROMPT when complete. We should only see YOUR ANSWERS.*
-
 ## 1. Interface
-Address as many of the following points as applicable:
 
++ The title of this project is "Drink Price Comparison", so I expected something that list side by side at the first place, I understood it later, though, when I saw the word calculate at the second line. 
 
-+ What are your initial impressions of the site interface?
-The title of this project is "Drink Price Comparison", so I expected something that list side by side at the first place, I understood it later, though, when I saw the word calculate at the second line. 
++ The interface is normal. The HTML file is rendered by browser only. The css link in header ( `css/form.css`) doesn't work as the only css file can be found at `/public/css` is `app.css`. The result page 
 
-+ Were there any parts of the interface that you found confusing, or did not work as you expected?
-The interface is normal as everything is under user agent stylesheet. There's a css file link in header named *css/form.css* but it doesn't work as there's only one css file named *app.css* under /public/css.
-
-+ Were there any parts of the interface that you thought worked notably well?
-
-
-+ Do you have any suggestions for improvements on the interface?
-
++ It might be better to move $ sign to the line of amount. That would be easier to the user, at least, to me. 
 
 ## 2. Functional testing
-One challenge of developing software is thinking of all the unexpected ways users might interact with our applications. It's easy to develop &ldquo;blinders&rdquo; to methods of interaction because we know so much about *how* our application works, and so we have a hard time imagining how our interfaces might be misinterpreted. Thus, it can be useful to have an outsider rigorously test our applications with the explicit intention of trying to break it.
 
-Knowing this, it's time to put your reviewee's application to the test. Think of all the unexpected ways their application could be used with the intention of trying to produce some unexpected/undesirable outcome.
-
-Examples...
-+ Try submitting a form without entering any data
-+ Try submitting a form with entering data in only some of the fields
-+ If an input is asking for a number, try entering some of the following combinations: decimal numbers, negative numbers, letters, symbols, an extremely large number, etc.
-+ Try and access a URL on their site that likely does not exist (e.g. http://a3.domain.com/asdjfks)
-+ Etc.
-
-__Summarize what you tried, and describe any unexpected/undesirable outcomes.__
-
-(Even if you don't find any issues, having the reviewee see what you tried might give them insight into things they did not think to test.)
-
+I tried to submit the form in different ways: letters rather than numbers, leave some of the input area empty, large, small, negtive number, etc. The only thing partially failed is when put a negtive number in field of price. The result, unit price, is still logiclly negtive, but the best pratice might be prevent the user from using negtive number at the first place. 
 
 
 ## 3. Code: Routes
-Skim through the student's code on Github.
 
-Find their routes file (`routes/web.php`). Thinking about ideal Route/Controller organization&mdash; is there any code in this file that should be happening in a Controller?
-
-If yes, describe.
+The routes file is simple and clean. No extra logic/display code in this file.
 
 ## 4. Code: Views
-Skim through the View files in `/resources/views` and address as many of the following points as applicable:
 
-+ Is template inheritance used?
-+ Are there any separation of concern issues (i.e. non-display specific logic in view files)?
-+ Did they do anything in PHP that could have been done in Blade?
-+ Did they use any Blade syntax/techniques you were unfamiliar with?
++ Template inheritance is not used.
++ There is no code separation issue.
++ The `load` method uses `return 'a string'` to show the result. It could be done by return to a blade and use `{{ }}` statements for pratice.
+
 
 ## 5. Code: General
-Address as many of the following points as applicable:
 
-+ Do you notice any inconsistencies between the code and the course notes on [code style](https://github.com/susanBuck/dwa15-fall2018/blob/master/misc/code-style.md)?
-+ Are there any best practices discussed in course material that you feel were not addressed in the code?
-+ Are there aspects of the code that you feel were not self-evident and would benefit from comments?
-+ Are there any parts of the code that you found interesting/would not have thought to do yourself?
-+ Are there any parts of the code that you don't understand?
++ There's no inconsistencies between the code and the course notes are found.
++ The validation is done by HTML itself. It would be better to take advantage of Laravel to validating the request and display errors. 
++ The code is relatievely simple and do not need commets.
++ It is a simple pratice and I found it easy to understand.
 
 ## 6. Misc
-Do you have any additional comments not covered in the above questions?
+No more comments.
